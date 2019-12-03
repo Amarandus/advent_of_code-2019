@@ -8,9 +8,12 @@ import Data.Map (Map)
 import qualified Data.Map as Map
 
 import AoC.D01
+import AoC.D02
 
 dayMap :: Map Int ([String] -> IO (), [String] -> IO ())
-dayMap = Map.fromList [(1, (d01p1, d01p2))]
+dayMap = Map.fromList [ (1, (d01p1, d01p2))
+                      , (2, (d02p1, d02p2))
+                      ]
 
 data CmdFields = CmdFields {day :: Int, part :: Int}
   deriving (Show, Data, Typeable)
