@@ -10,11 +10,13 @@ import qualified Data.Map as Map
 import AoC.D01
 import AoC.D02
 import AoC.D03
+import AoC.D04
 
 dayMap :: Map Int ([String] -> IO (), [String] -> IO ())
 dayMap = Map.fromList [ (1, (d01p1, d01p2))
                       , (2, (d02p1, d02p2))
                       , (3, (d03p1, d03p2))
+                      , (4, (d04p1, d04p2))
                       ]
 
 data CmdFields = CmdFields {day :: Int, part :: Int}
