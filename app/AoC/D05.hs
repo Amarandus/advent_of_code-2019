@@ -1,4 +1,6 @@
-module AoC.D05(d05p1, d05p2) where
+module AoC.D05(d05p1, d05p2, runIntMachine, wordsWhen,
+               IntMachineState, Input, Output, Memory,
+               ParserState (Exec, Halted), performOp) where
 
 import Data.Maybe (catMaybes)
 import Text.Read (readMaybe)
@@ -100,7 +102,7 @@ evalOp (mem,  Halted, _, o)      _ = (mem, Halted, [], o)
 
 
 performOp :: IntMachineState -> IntMachineState
-performOp s@(mem, Exec ip, i, o) = evalOp (traceShowId s) $ traceShowId $ parseOp mem ip
+performOp s@(mem, Exec ip, i, o) = evalOp s $ traceShowId $ parseOp mem ip
 performOp s@(mem, Halted, i, o) = evalOp s $ Halt
 
 runIntMachine :: State IntMachineState [Int]
