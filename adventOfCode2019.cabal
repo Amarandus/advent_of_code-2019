@@ -20,7 +20,7 @@ extra-source-files:  CHANGELOG.md
 executable adventOfCode2019
   main-is:             Main.hs
   other-modules:       AoC.D01, AoC.D02, AoC.D03, AoC.D04, AoC.D05, AoC.D06,
-                       AoC.D07
+                       AoC.D07, AoC.D08
   -- other-extensions:
   build-depends:       base ^>=4.12.0.0, mtl, cmdargs, containers, vector, sbv
   hs-source-dirs:      app
