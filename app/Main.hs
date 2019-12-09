@@ -15,6 +15,7 @@ import AoC.D05
 import AoC.D06
 import AoC.D07
 import AoC.D08
+import AoC.D09
 
 dayMap :: Map Int ([String] -> IO (), [String] -> IO ())
 dayMap = Map.fromList [ (1, (d01p1, d01p2))
@@ -25,6 +26,7 @@ dayMap = Map.fromList [ (1, (d01p1, d01p2))
                       , (6, (d06p1, d06p2))
                       , (7, (d07p1, d07p2))
                       , (8, (d08p1, d08p2))
+                      , (9, (d09p1, d09p2))
                       ]
 
 data CmdFields = CmdFields {day :: Int, part :: Int}
